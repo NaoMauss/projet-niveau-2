@@ -1,6 +1,11 @@
 # Projet Streamer Base
 
-Ce projet est composé de deux parties principales : un backend (back) et un frontend (front). Voici les instructions pour installer et exécuter chaque partie, ainsi que les technologies utilisées.
+Ce projet est composé de deux parties principales : un backend (back) et un frontend (front). 
+Le concept est de pouvoir tracker des streamers ou joueurs de league of legends connu. Pour cela il suffit d'ajouter un joueur via son pseudo et on obtient
+une multitude de statistiques sur le joueur. On peut également le comparer avec les autres et voir ceux qui sont en live. Cela inclut donc une authentification
+pour s'identifier et un système d'embed twitch pour visionner le streamer en direct.
+
+Voici les instructions pour installer et exécuter chaque partie, ainsi que les technologies utilisées.
 
 ## Backend (back)
 
@@ -58,6 +63,8 @@ Le serveur sera accessible à l'adresse `http://localhost:3000`.
 - Vite comme outil de build
 - TypeScript pour le typage statique
 - Pinia pour la gestion d'état
+- Vitest pour les tests unitaires
+- Cypress pour les tests e2e
 
 ### Installation
 
@@ -86,21 +93,15 @@ Le projet inclut des fichiers Docker pour faciliter le déploiement. Pour constr
 
 1. Assurez-vous d'avoir Docker installé sur votre machine.
 
-2. À la racine du projet back, exécutez :
-   ```
-   docker build -t streamer-base-back .
-   docker run -d -p 3000:3000 --name streamer-base-back streamer-base-back
-   ```
-
-Cela construira et lancera les conteneurs pour le backend.
+Cela construira et lancera les conteneurs pour le backend et le frontend.
 
 ## Pipeline
 
-Le projet utilise GitHub Actions sur la partie back pour vérifier que le container Docker fonctionne correctement.
-Il execute également des tests unitaires pour vérifier que le code fonctionne correctement.
+Le projet utilise GitHub Actions sur la partie back et frontpour vérifier que les containers Docker fonctionnent correctement.
+Il execute également des tests unitaires et e2e pour vérifier que le code fonctionne correctement.
 
 ## Notes supplémentaires
 
 - Assurez-vous que toutes les variables d'environnement nécessaires sont correctement configurées avant de lancer l'application.
-- Pour les tests, utilisez la commande `bun run test` dans le dossier `back`.
 - Pour plus d'informations sur la structure du projet et les fonctionnalités spécifiques, consultez les fichiers source et les commentaires dans le code.
+- N'hésitez pas à contacter nao.mausservey@efrei.net si vous avez des questions.
