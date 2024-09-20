@@ -19,20 +19,26 @@ jobs:
         node-version: '18'
 
     - name: Install dependencies
+      working-directory: ./front
       run: npm install
 
     - name: Run unit tests
+      working-directory: ./front
       run: npm run test:unit
 
     - name: Run Cypress tests
       uses: cypress-io/github-action@v5
       with:
+        working-directory: front
         build: npm run build
         start: npm run dev
         wait-on: 'http://localhost:5173'
 
   build-docker:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./front
 
     steps:
     - uses: actions/checkout@v3

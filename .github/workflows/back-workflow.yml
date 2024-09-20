@@ -23,6 +23,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: './back/package-lock.json'
 
     - run: npm install
 
@@ -40,7 +41,7 @@ jobs:
     - name: Build Docker image
       uses: docker/build-push-action@v4
       with:
-        context: .
+        context: ./back
         push: false
         load: true
         tags: projet-secret:latest
