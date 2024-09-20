@@ -1,0 +1,16 @@
+name: Main Workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  front-workflow:
+    name: Front-end Workflow
+    uses: ./.github/workflows/front-workflow.yml
+
+  back-workflow:
+    name: Back-end Workflow
+    uses: ./.github/workflows/back-workflow.yml
