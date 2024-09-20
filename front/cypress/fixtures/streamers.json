@@ -1,0 +1,15 @@
+[
+  {
+    "id": "1",
+    "name": "Test Streamer",
+    "pseudo": "TestStreamer123",
+    "tier": "DIAMOND",
+    "rank": "II",
+    "leaguePoints": 75,
+    "wins": 100,
+    "losses": 80,
+    "winrate": 55.56,
+    "twitchLink": "teststreamer",
+    "twitter": "teststreamer"
+  }
+]

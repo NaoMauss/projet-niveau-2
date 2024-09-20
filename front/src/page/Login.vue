@@ -1,7 +1,7 @@
 <template>
   <div v-if="login" class="container">
     <div class="form-container">
-      <button @click="toggleLogin(false)" class="login-register">Créer un compte</button>
+      <button @click="toggleLogin(false)" class="login-register" data-cy="to-register">Créer un compte</button>
       <h2>Connexion</h2>
       <div class="form-group">
         <label for="email">Email</label>
@@ -11,7 +11,7 @@
         <label for="password">Mot de passe</label>
         <input type="password" id="password" v-model="user.password" />
       </div>
-      <button @click="handleLogin" type="submit">Se connecter</button>
+      <button @click="handleLogin" type="submit"  data-cy="login-button">Se connecter</button>
     </div>
   </div>
   <div v-else class="container">
@@ -34,7 +34,7 @@
         <label for="confirmPassword">Confirmer le mot de passe</label>
         <input type="password" id="confirmPassword" v-model="newUser.confirmPassword" />
       </div>
-      <button @click="handleRegister" type="submit">Créer un compte</button>
+      <button @click="handleRegister" type="submit"  data-cy="register-button">Créer un compte</button>
     </div>
   </div>
 </template>
