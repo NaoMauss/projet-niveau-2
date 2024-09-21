@@ -105,3 +105,14 @@ Il execute également des tests unitaires et e2e pour vérifier que le code fonc
 - Assurez-vous que toutes les variables d'environnement nécessaires sont correctement configurées avant de lancer l'application.
 - Pour plus d'informations sur la structure du projet et les fonctionnalités spécifiques, consultez les fichiers source et les commentaires dans le code.
 - N'hésitez pas à contacter nao.mausservey@efrei.net si vous avez des questions.
+
+## Quelques screenshots de l'application
+
+![image](https://github.com/user-attachments/assets/37980e37-850d-4956-9227-3e4a80928633)
+
+![image](https://github.com/user-attachments/assets/744db8b0-c5e8-4547-898c-54af53a6899a)
+
+![image](https://github.com/user-attachments/assets/818aa02d-e878-4270-8f10-1edcb47bbdf8)
+
+
+
